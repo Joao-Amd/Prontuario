@@ -4,6 +4,8 @@ namespace Prontuario.Dominio.Avaliacoes
 {
     public class Avaliacao
     {
+        public Avaliacao() { }
+
         public Guid Id { get; private set; }
         public Guid CodigoPaciente { get; private set; }
 

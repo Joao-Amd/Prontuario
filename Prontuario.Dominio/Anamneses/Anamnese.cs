@@ -4,6 +4,7 @@ namespace Prontuario.Dominio.Anamneses
 {
     public class Anamnese
     {
+        public Anamnese(){}
         public Anamnese(Paciente paciente, string descricao)
         {
             Id = Guid.NewGuid();

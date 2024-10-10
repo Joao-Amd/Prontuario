@@ -20,5 +20,11 @@ namespace Prontuario.Repositorio.Contextos
         public virtual DbSet<Oportunidade> Oportunidade { get; set; }
         public virtual DbSet<Paciente> Paciente { get; set; }
         public virtual DbSet<Receita> Receita { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.ApplyConfigurationsFromAssembly(typeof(Contexto).Assembly);
+        }
     }
 }

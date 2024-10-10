@@ -4,6 +4,8 @@ namespace Prontuario.Dominio.Oportunidades
 {
     public class Oportunidade
     {
+        public Oportunidade() { }
+
         public Guid Id { get; private set; }
         public Guid CodigoPaciente { get; private set; }
         public string Descricao { get; private set; }

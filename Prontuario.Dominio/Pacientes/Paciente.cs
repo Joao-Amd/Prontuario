@@ -10,6 +10,8 @@ namespace Prontuario.Dominio.Pacientes
 {
     public class Paciente
     {
+        public Paciente() { }
+
         public Paciente(string nome, string nomePai, string nomeMae, string cpf, DateTime dataNascimento,
             EnumGeneroPaciente generoPaciente, string numeroCelular, string email, EnumGrupoSanguineoPaciente grupoSanguineo, string obs)
         {
@@ -53,7 +55,7 @@ namespace Prontuario.Dominio.Pacientes
         public static Paciente Novo(string nome, string nomePai, string nomeMae, string cpf, DateTime dataNascimento,
             EnumGeneroPaciente generoPaciente, string numeroCelular, string email, EnumGrupoSanguineoPaciente grupoSanguineo, string obs)
         {
-            return new Paciente( nome, nomePai, nomeMae, cpf, dataNascimento, generoPaciente, numeroCelular, email, grupoSanguineo, obs);
+            return new Paciente(nome, nomePai, nomeMae, cpf, dataNascimento, generoPaciente, numeroCelular, email, grupoSanguineo, obs);
         }
 
         public void Atualizar(string nome, string nomePai, string nomeMae, string cpf, DateTime dataNascimento,

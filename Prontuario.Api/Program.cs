@@ -7,6 +7,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<Contexto>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddControllers();
 
 builder.Services.AddControllers();
