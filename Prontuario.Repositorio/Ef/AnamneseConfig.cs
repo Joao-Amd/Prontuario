@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Prontuario.Dominio.Anamneses;
-using Prontuario.Dominio.Pacientes;
-using System.Reflection.Emit;
 
 namespace Prontuario.Repositorio.Et
 {
