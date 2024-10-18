@@ -4,7 +4,19 @@ namespace Prontuario.Dominio.Enderecos
 {
     public class Endereco
     {
-        public Endereco() { }
+        public Endereco(Paciente paciente, string rua, string cep, int numeroEndereco, string cidade, string uf, string detalhes, string referencia) 
+        {
+            Id = Guid.NewGuid();
+            CodigoPaciente = paciente.Id;
+            Paciente = paciente;
+            Rua = rua;
+            Cep = cep;
+            NumeroEndereco = numeroEndereco;
+            Cidade = cidade;
+            Uf = uf;
+            Detalhes = detalhes;
+            Referencia = referencia;
+        }
 
         public Guid Id { get; private set; }
         public Guid CodigoOrigem { get; private set; }
