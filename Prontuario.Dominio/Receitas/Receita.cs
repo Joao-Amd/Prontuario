@@ -4,6 +4,7 @@ namespace Prontuario.Dominio.Receitas
 {
     public class Receita
     {
+        public Receita() { }
         public Receita(Paciente paciente, string descricao) 
         { 
             Id = Guid.NewGuid();

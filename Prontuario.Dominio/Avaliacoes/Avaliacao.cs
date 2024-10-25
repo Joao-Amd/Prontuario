@@ -4,6 +4,8 @@ namespace Prontuario.Dominio.Avaliacoes
 {
     public class Avaliacao
     {
+        public Avaliacao() { }
+
         public Avaliacao(Paciente paciente, string descricao) 
         { 
             Id = Guid.NewGuid();

@@ -19,7 +19,7 @@ namespace Prontuario.Dominio.Pacientes
             Nome = nome;
             NomeMae = nomeMae;
             NomePai = nomePai;
-            CPF = cpf;
+            Cpf = cpf;
             DataNascimento = dataNascimento;
             Genero = generoPaciente;
             NumeroCelular = numeroCelular;
@@ -34,7 +34,7 @@ namespace Prontuario.Dominio.Pacientes
         public string Nome { get; private set; }
         public string NomeMae { get; private set; }
         public string NomePai { get; private set; }
-        public string CPF { get; private set; }
+        public string Cpf { get; private set; }
         public DateTime DataNascimento { get; private set; }
         public EnumGeneroPaciente Genero { get; private set; }
         public string NumeroCelular { get; private set; }
@@ -64,7 +64,7 @@ namespace Prontuario.Dominio.Pacientes
             Nome = nome;
             NomeMae = nomeMae;
             NomePai = nomePai;
-            CPF = cpf;
+            Cpf = cpf;
             DataNascimento = dataNascimento;
             Genero = generoPaciente;
             NumeroCelular = numeroCelular;

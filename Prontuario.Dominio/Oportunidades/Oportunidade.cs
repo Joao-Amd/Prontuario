@@ -4,6 +4,7 @@ namespace Prontuario.Dominio.Oportunidades
 {
     public class Oportunidade
     {
+        public Oportunidade(){}
         public Oportunidade(Paciente paciente, string descricao)
         { 
             Id = Guid.NewGuid();

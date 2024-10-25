@@ -4,6 +4,7 @@ namespace Prontuario.Dominio.Baixas
 {
     public class Baixa
     {
+        public Baixa() {}
         public Baixa(Paciente paciente, string descricao) 
         {
             Id = Guid.NewGuid();
