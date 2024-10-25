@@ -34,7 +34,19 @@ namespace Prontuario.Repositorio.RepPatterns
             var entity = DbSet.Find(id);
             DbSet.Remove(entity);
         }
+
+        public void Delete(Guid id)
+        {
+            var entity = DbSet.Find(id);
+            DbSet.Remove(entity);
+        }
+
         public T GetById(int id)
+        {
+            return DbSet.Find(id);
+        }
+
+        public T GetById(Guid id)
         {
             return DbSet.Find(id);
         }

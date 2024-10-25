@@ -30,17 +30,23 @@ namespace Prontuario.Aplicacao.Pacientes
 
         public PacienteViewModel RecuperarPorId(Guid id)
         {
-            throw new NotImplementedException();
+            var paciente = _repPaciente.GetById(id);
+
+            return PacienteViewModel.Novo(paciente);
         }
 
         public List<PacienteViewModel> RecuperarTodos()
         {
-            throw new NotImplementedException();
+           var pacientes = _repPaciente.Get();
+
+            return pacientes.Select(x => PacienteViewModel.Novo(x)).ToList();
         }
 
         public void Remover(Guid id)
         {
-            throw new NotImplementedException();
+            _repPaciente.Delete(id);
+
+            _unitOfWork.Commit();
         }
     }
 }
