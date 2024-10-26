@@ -13,8 +13,6 @@ namespace Prontuario.Aplicacao.Pacientes.Dtos
         public string NumeroCelular { get; set; }
         public string Email { get; set; }
         public EnumGrupoSanguineoPaciente GrupoSanguineo { get; set; }
-        public DateTime DataCadastro { get; set; }
         public string Observacoes { get; set; }
-
     }
 }

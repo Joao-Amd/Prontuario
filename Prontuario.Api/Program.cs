@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Prontuario.Aplicacao.Pacientes;
+using Prontuario.Dominio.Pacientes;
 using Prontuario.Repositorio.Contextos;
+using Prontuario.Repositorio.RepPatterns;
+using Prontuario.Repositorio.UnitOfWorks;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +14,9 @@ builder.Services.AddDbContext<Contexto>(options =>
 
 builder.Services.AddControllers();
 
-builder.Services.AddControllers();
+builder.Services.AddScoped<IAplicPaciente, AplicPaciente>();
+builder.Services.AddScoped<IRep<Paciente>, Rep<Paciente>>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
