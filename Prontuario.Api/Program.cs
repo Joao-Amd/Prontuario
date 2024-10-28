@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Prontuario.Aplicacao.Mappings;
 using Prontuario.Aplicacao.Pacientes;
 using Prontuario.Dominio.Pacientes;
 using Prontuario.Repositorio.Contextos;
@@ -11,6 +12,8 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<Contexto>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddAutoMapper(typeof(EntitiesToDtoMappingProfile));
 
 builder.Services.AddControllers();
 
