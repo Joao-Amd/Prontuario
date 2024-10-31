@@ -8,6 +8,7 @@ namespace Prontuario.Aplicacao.Pacientes
         PacienteViewModel RecuperarPorId(Guid id);
         List<PacienteViewModel> RecuperarTodos();
         PacienteViewModel Inserir(PacienteDto dto);
+        PacienteViewModel Alterar(Guid id, PacienteDto dto);
         void Remover(Guid id);
     }
 }

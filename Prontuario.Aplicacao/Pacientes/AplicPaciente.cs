@@ -28,6 +28,18 @@ namespace Prontuario.Aplicacao.Pacientes
             return PacienteViewModel.Novo(paciente);
         }
 
+        public PacienteViewModel Alterar(Guid id, PacienteDto dto)
+        {
+            var paciente = _repPaciente.GetById(id);
+
+            paciente.Atualizar(dto.Nome, dto.NomePai, dto.NomeMae, dto.cpf, dto.DataNascimento, dto.Genero, dto.NumeroCelular, dto.Email, dto.GrupoSanguineo, dto.Observacoes);
+
+            _unitOfWork.Commit();
+
+            return PacienteViewModel.Novo(paciente);
+        }
+
+
         public PacienteViewModel RecuperarPorId(Guid id)
         {
             var paciente = _repPaciente.GetById(id);

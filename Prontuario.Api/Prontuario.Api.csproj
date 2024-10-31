@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Prontuario.Aplicacao\Prontuario.Aplicacao.csproj" />
     <ProjectReference Include="..\Prontuario.Infra\Prontuario.Infra.csproj" />
     <ProjectReference Include="..\Prontuario.Repositorio\Prontuario.Repositorio.csproj" />
   </ItemGroup>
